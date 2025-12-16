@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clueso Feedback</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 10px;
+        width: 250px;
+      }
+      textarea {
+        width: 100%;
+        height: 80px;
+      }
+      button {
+        width: 100%;
+        margin-top: 10px;
+      }
+      .success {
+        color: green;
+        font-size: 14px;
+        margin-top: 8px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Send Feedback</h3>
+    <textarea id="feedback" placeholder="Type feedback..."></textarea>
+    <button id="submit">Submit</button>
+
+    <div id="success" class="success">
+      ✅ Feedback sent successfully!
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

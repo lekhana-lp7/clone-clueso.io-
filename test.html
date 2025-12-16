@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Send Feedback</h2>
+
+    <button onclick="sendFeedback()">Send Test Feedback</button>
+
+    <script>
+      function sendFeedback() {
+        fetch("http://localhost:4000/feedback", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            content: "This page is confusing",
+            url: "https://example.com",
+            pageTitle: "Pricing Page"
+          })
+        })
+        .then(res => res.json())
+        .then(data => alert("Feedback sent!"));
+      }
+    </script>
+  </body>
+</html>
